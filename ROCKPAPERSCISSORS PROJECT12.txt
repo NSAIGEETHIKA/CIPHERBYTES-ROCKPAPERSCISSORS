@@ -1,0 +1,18 @@
+import random
+
+def play():
+    player_choice = input("1 for rock, 2 for paper, 3 for scissors: ")
+    options = ["1", "2", "3"]
+    computer_choice = random.choice(options)
+    print(f'Your choice: {player_choice} <=> Opponent choice: {computer_choice}')
+    
+    if player_choice == computer_choice:
+        print("The game is a tie")
+    elif (player_choice == '2' and computer_choice == '1') or \
+         (player_choice == '1' and computer_choice == '3') or \
+         (player_choice == '3' and computer_choice == '2'):
+        print("You won the game")
+    else:
+        print("Better luck next time")
+
+play()
